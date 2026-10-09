@@ -1,0 +1,679 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f5f1e8;
+    color: #202020;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #ddd;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #111;
+}
+
+.logo span {
+    color: #1769aa;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #1769aa;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 100px;
+
+    padding: 80px 7%;
+}
+
+
+/* Book Cover */
+
+.book-cover {
+    width: 370px;
+    height: 520px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0c3150,
+            #1769aa
+        );
+
+    color: white;
+
+    position: relative;
+
+    padding: 45px;
+
+    border-radius: 5px 15px 15px 5px;
+
+    box-shadow:
+        15px 20px 35px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+}
+
+.book-cover::before {
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: rgba(255,255,255,0.25);
+}
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+}
+
+.small-title {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.book-cover h1 {
+    font-size: 54px;
+    line-height: 1.05;
+    margin: 35px 0 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.cover-line {
+    width: 80px;
+    height: 3px;
+    background: white;
+
+    margin: 30px 0;
+}
+
+.author {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cover-decoration {
+    position: absolute;
+
+    right: -20px;
+    bottom: -20px;
+
+    font-family: monospace;
+
+    font-size: 120px;
+
+    opacity: 0.1;
+
+    transform: rotate(-10deg);
+}
+
+
+/* Hero Text */
+
+.hero-text {
+    max-width: 500px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    background: #dcecf8;
+
+    color: #1769aa;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero-text h2 {
+    font-size: 52px;
+    line-height: 1.1;
+
+    margin: 25px 0;
+}
+
+.hero-text h2 span {
+    color: #1769aa;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #555;
+
+    margin-bottom: 30px;
+}
+
+.read-btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #1769aa;
+    color: white;
+
+    border-radius: 7px;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.read-btn:hover {
+    background: #0c3150;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 100px 8%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 55px;
+}
+
+.section-title span {
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #1769aa;
+}
+
+.section-title h2 {
+    font-size: 40px;
+}
+
+
+/* =========================
+   BIOGRAPHY
+========================= */
+
+.bio-grid {
+    display: grid;
+
+    grid-template-columns: 380px 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 8px;
+
+    box-shadow:
+        10px 15px 30px rgba(0,0,0,0.2);
+}
+
+.image-caption {
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #777;
+
+    margin-top: 10px;
+}
+
+.bio-text p {
+    margin-bottom: 20px;
+}
+
+.bio-text .opening {
+    font-size: 23px;
+    font-weight: bold;
+    color: #1769aa;
+}
+
+
+/* =========================
+   DARK SECTION
+========================= */
+
+.dark-section {
+    background: #102a43;
+    color: white;
+
+    padding: 100px 8%;
+}
+
+.light {
+    color: white;
+}
+
+.light span {
+    color: #6db5e8;
+}
+
+.story {
+    max-width: 1000px;
+
+    margin: 0 auto 55px;
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 50px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    padding-bottom: 40px;
+}
+
+.year strong {
+    display: block;
+
+    font-size: 40px;
+
+    color: #6db5e8;
+}
+
+.year span {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.story p {
+    margin-bottom: 15px;
+
+    color: #d8e5ee;
+}
+
+
+/* =========================
+   ACHIEVEMENT CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.15);
+}
+
+.icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 14px;
+
+    color: #666;
+}
+
+
+/* =========================
+   LEGACY
+========================= */
+
+.legacy {
+    padding: 100px 8%;
+
+    background: white;
+}
+
+.legacy-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+blockquote {
+    font-size: 32px;
+
+    font-style: italic;
+
+    color: #1769aa;
+
+    border-left: 5px solid #1769aa;
+
+    padding-left: 25px;
+
+    margin-bottom: 40px;
+}
+
+.legacy-content p {
+    margin-bottom: 20px;
+}
+
+.fact-box {
+    margin-top: 40px;
+
+    padding: 25px;
+
+    background: #e9f4fb;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #1769aa;
+}
+
+.fact-box strong {
+    display: block;
+
+    color: #1769aa;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: #102a43;
+
+    color: white;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #b8c7d4;
+}
+
+#topBtn {
+    margin: 25px 0;
+
+    padding: 12px 20px;
+
+    border: 1px solid #6db5e8;
+
+    background: transparent;
+
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#topBtn:hover {
+    background: #1769aa;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+
+        gap: 60px;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 650px;
+    }
+
+    .bio-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+
+        margin: auto;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        box-shadow:
+            0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .book-cover {
+        width: 290px;
+        height: 420px;
+
+        padding: 35px;
+    }
+
+    .book-cover h1 {
+        font-size: 42px;
+    }
+
+    .hero-text h2 {
+        font-size: 38px;
+    }
+
+    .section,
+    .dark-section,
+    .legacy {
+        padding: 70px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    blockquote {
+        font-size: 24px;
+    }
+}

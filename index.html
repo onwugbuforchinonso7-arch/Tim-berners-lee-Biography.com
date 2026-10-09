@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tim Berners-Lee | Biography Book</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">TBL<span>BIOGRAPHY</span></div>
+
+        <button id="menuBtn" class="menu-btn">☰</button>
+
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#biography">Biography</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#legacy">Legacy</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero / Book Cover -->
+    <section id="home" class="hero">
+
+        <div class="book-cover">
+
+            <div class="cover-content">
+
+                <p class="small-title">THE BIOGRAPHY OF</p>
+
+                <h1>
+                    Tim<br>
+                    Berners-Lee
+                </h1>
+
+                <p class="subtitle">
+                    The Man Who Invented the World Wide Web
+                </p>
+
+                <div class="cover-line"></div>
+
+                <p class="author">
+                    A Short Biography
+                </p>
+
+            </div>
+
+            <div class="cover-decoration">
+                &lt;/&gt;
+            </div>
+
+        </div>
+
+        <div class="hero-text">
+
+            <span class="badge">Biography Book</span>
+
+            <h2>
+                The Story Behind
+                <span>the Web</span>
+            </h2>
+
+            <p>
+                Discover the life, work and achievements of
+                Tim Berners-Lee, the computer scientist who
+                created the World Wide Web.
+            </p>
+
+            <a href="#biography" class="read-btn">
+                Start Reading →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Biography -->
+    <main>
+
+        <section id="biography" class="section">
+
+            <div class="section-title">
+                <span>01</span>
+                <h2>Biography</h2>
+            </div>
+
+            <div class="bio-grid">
+
+                <div class="image-container">
+                    <img
+                        src="data:image/jpeg;base64,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"
+                        alt="Tim Berners-Lee"
+                    >
+
+                    <p class="image-caption">
+                        Tim Berners-Lee
+                    </p>
+                </div>
+
+                <div class="bio-text">
+
+                    <p class="opening">
+                        Sir Tim Berners-Lee is a British computer
+                        scientist best known as the inventor of the
+                        World Wide Web.
+                    </p>
+
+                    <p>
+                        He was born on 8 June 1955 in London, England.
+                        His parents were mathematicians and computer
+                        scientists who worked on one of the earliest
+                        commercial computers.
+                    </p>
+
+                    <p>
+                        Berners-Lee studied physics at Queen's College,
+                        Oxford. After graduating, he worked on several
+                        computer and technology projects before joining
+                        CERN, the European Organization for Nuclear
+                        Research.
+                    </p>
+
+                    <p>
+                        While working at CERN, he noticed that scientists
+                        needed an easier way to share information between
+                        different computers. This idea eventually led him
+                        to develop the foundations of the World Wide Web.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Invention -->
+        <section class="dark-section">
+
+            <div class="section-title light">
+                <span>02</span>
+                <h2>The Birth of the Web</h2>
+            </div>
+
+            <div class="story">
+
+                <div class="year">
+                    <strong>1989</strong>
+                    <span>The Proposal</span>
+                </div>
+
+                <div>
+                    <p>
+                        In 1989, Tim Berners-Lee proposed a system that
+                        would allow information to be connected and
+                        accessed across computers.
+                    </p>
+
+                    <p>
+                        He developed important technologies including
+                        HTML, HTTP and URLs. Together, these technologies
+                        became fundamental parts of the World Wide Web.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="story">
+
+                <div class="year">
+                    <strong>1990</strong>
+                    <span>The First Website</span>
+                </div>
+
+                <div>
+                    <p>
+                        Berners-Lee created the first web server and
+                        web browser. He also created the first website,
+                        which explained how the World Wide Web worked.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="story">
+
+                <div class="year">
+                    <strong>1991</strong>
+                    <span>The Web Goes Public</span>
+                </div>
+
+                <div>
+                    <p>
+                        The World Wide Web became available to people
+                        outside CERN, helping the technology spread
+                        around the world.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Achievements -->
+        <section id="achievements" class="section">
+
+            <div class="section-title">
+                <span>03</span>
+                <h2>Major Achievements</h2>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="icon">🌐</div>
+                    <h3>World Wide Web</h3>
+                    <p>
+                        Created the World Wide Web and its foundational
+                        technologies.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon">💻</div>
+                    <h3>HTML</h3>
+                    <p>
+                        Developed HTML as a way to structure documents
+                        on the web.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon">🔗</div>
+                    <h3>URL</h3>
+                    <p>
+                        Helped create the system used to identify
+                        resources on the web.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon">⚡</div>
+                    <h3>HTTP</h3>
+                    <p>
+                        Developed HTTP, an important protocol for
+                        communication between web browsers and servers.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Legacy -->
+        <section id="legacy" class="legacy">
+
+            <div class="section-title">
+                <span>04</span>
+                <h2>His Legacy</h2>
+            </div>
+
+            <div class="legacy-content">
+
+                <blockquote>
+                    "The web is more a social creation than a technical one."
+                </blockquote>
+
+                <p>
+                    Tim Berners-Lee has continued to advocate for an
+                    open and accessible web. He founded the World Wide
+                    Web Consortium (W3C), an organization that develops
+                    web standards.
+                </p>
+
+                <p>
+                    His invention transformed communication, education,
+                    business, entertainment and access to information.
+                    Today, billions of people use the web for everyday
+                    activities.
+                </p>
+
+                <div class="fact-box">
+                    <strong>Did you know?</strong>
+
+                    <p>
+                        Berners-Lee chose not to patent the World Wide
+                        Web, allowing the technology to develop openly.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>Tim Berners-Lee</h2>
+
+        <p>
+            A short biography of the inventor of the World Wide Web.
+        </p>
+
+        <button id="topBtn">
+            ↑ Back to Top
+        </button>
+
+        <p class="copyright">
+            © 2026 Biography Book
+           <h2> Produced by chinonso</h2>
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
